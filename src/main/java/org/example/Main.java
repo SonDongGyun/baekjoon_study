@@ -2,13 +2,20 @@ package org.example;
 
 import java.util.Scanner;
 
+/**
+ * @author SDG
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int num1 = s.nextInt();
-        int num2 = s.nextInt();
-        if(num1 > 0 && num2 > 0 ){
-            System.out.println(num1+num2);
-        }
+        int a = s.nextInt();
+        int b = s.nextInt();
+        int c = s.nextInt();
+        s.close();
+        System.out.println((a+b)%c);
+        System.out.println( ( (a % c) + (b % c)  ) % c );
+        System.out.println((a*b)%c);
+        System.out.println(((a%c)*(b%c))%c);
     }
+
 }
